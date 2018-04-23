@@ -13,7 +13,7 @@ module Api
     # POST api/{locale}/grades
     def create
       @grade = Grade.new(grade_params)
-      @grade.ncc = active_ncc
+      @grade.ncc = active_ncc_rr
 
       if @grade.save
         render json: @grade, status: :created
